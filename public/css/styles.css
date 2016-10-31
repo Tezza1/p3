@@ -85,6 +85,11 @@ nav a:visited {
     -webkit-column-count: 3; /* Chrome, Safari, Opera */
     -moz-column-count: 3; /* Firefox */
     column-count: 3;
+    line-height: 1.5em;
+}
+
+.overview p:first-letter  {
+    font-size: 1.2em;
 }
 
 /* ---------- FOOTER STYLES ---------- */
