@@ -13,7 +13,7 @@ class LoremController extends Controller
      */
     public function index()
     {
-        //TDDO: Add
+        // TODO: Add
         return view('p3.lorems');
     }
 

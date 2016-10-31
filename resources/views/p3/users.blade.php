@@ -1,28 +1,24 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Show Book</title>
-    <meta charset='utf-8'>
-    <link href="/css/foobooks.css" type='text/css' rel='stylesheet'>
-</head>
-<body>
+@extends("p3.layouts.master")
 
-    <header>
-        <img
-        src='http://making-the-internet.s3.amazonaws.com/laravel-foobooks-logo@2x.png'
-        style='width:300px'
-        alt='Foobooks Logo'>
-    </header>
+@section("title")
+    User Generator
+@stop
 
-    <section>
-        <h1>Users page</h1>
-    </section>
+@section("mainBanner")
+	<img src="img/jsCoffee.jpg" alt="">
+	<img src="img/html.jpg" alt="">
+@stop
 
-    <footer>
-        &copy; {{ date('Y') }}
-    </footer>
+@section("headline")
+	<h1>User Generator</h1>
+@stop
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+@section("overview")
+	<p>jfhdhfkdfhkd</p>
+	<p>uiyuiyiyiuyiy</p>
+	<p>uyiuyiyiyi</p>
+@stop
 
-</body>
-</html>
+@section("contents")
+
+@stop

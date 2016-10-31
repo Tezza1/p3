@@ -1,0 +1,136 @@
+/* ---------- WHOLE PAGE ---------- */
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+    margin-top: 0;
+    font-family: sans-serif;
+}
+
+
+/*  ---------HEADER STYLES ---------- */
+
+header {
+    background: url('https://d1nhn4igk64mvs.cloudfront.net/jumpchart/20140225/head_b.png') repeat center top;
+    height: 110px;
+    margin-top: 0;
+}
+
+header h1 {
+    color: white;
+    font-family: 'Comfortaa', cursive;
+    display: inline;
+    padding-left: 0.5em;
+}
+
+.topOfPage {
+    display: inline-block;
+    width: 100%;
+    padding-top: 1.5em;
+    padding-left: 1em;
+}
+
+
+/* ---------- NAV STYLES ---------- */
+
+nav {
+    float: right;
+}
+
+nav li {
+    list-style: none;
+    display: inline;
+    padding: 0 1em 1em 0;
+}
+
+nav a {
+    font-family: 'Comfortaa', cursive;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 1.5em 1em;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+nav a:visited {
+    color: #f7f7fb;
+}
+
+/* ---------- MAIN BANNER ---------- */
+
+.mainBanner img {
+	max-height: 500px;
+	width: 48%;
+}
+
+/* ---------- MAIN SECTION ---------- */
+
+.headline h1 {
+    font-family: 'Comfortaa', cursive;
+    color: grey;
+}
+
+.overview {
+    font-family: 'Comfortaa', cursive;
+    -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+}
+
+/* ---------- FOOTER STYLES ---------- */
+
+.topFooter {
+    background: white url('https://d1nhn4igk64mvs.cloudfront.net/jumpchart/20130604/images/screenshots-bg.png') repeat-x center bottom;
+    overflow: hidden;
+    padding-bottom: 2.7em;
+    clear: both;
+}
+
+.bottomFooter {
+    clear: both;
+    width: 100%;
+    color: #a8a8a8;
+    display: block;
+    background: url('https://d1nhn4igk64mvs.cloudfront.net/jumpchart/20130604/images/footer-bg.png');
+    padding: 1.5em 0 1.5em 0;
+}
+
+.fa {
+    color: white;
+}
+
+footer li {
+    list-style: none;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Comfortaa', cursive;
+    padding: 1.5em 0em 0em 1.5em;
+}
+
+footer h6 {
+    color: white;
+    font-family: 'Comfortaa', cursive;
+    text-align: center;
+    padding: 0 0;
+    margin: 0 0;
+}
+
+.bottomFooter ul {
+    -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+}
+
