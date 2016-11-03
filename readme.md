@@ -1,11 +1,19 @@
-## TO DO:
-Put overview of application 
+# This is the p3 project for dwa 15
 
-## COMMIT HISTORY
-29 October 2016 - First committ
+## Project object:
+To implement a website using the laravel framework
 
-## for how to create a link
+## Requirements:
++ Use at least 1 package
++ a user generator
++ a lorem ipsum generator 
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
+## The site consists of 3 pages
++ landing page
++ a user generator page
++ a lorem ipsum generator page
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+## Website address
+The site can be found at: [p3](#)
+
+

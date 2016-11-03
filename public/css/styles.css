@@ -107,35 +107,14 @@ nav a:visited {
     color: #a8a8a8;
     display: block;
     background: url('https://d1nhn4igk64mvs.cloudfront.net/jumpchart/20130604/images/footer-bg.png');
-    padding: 1.5em 0 1.5em 0;
+    padding: 1.5em 0 1.5em 1.5em;
 }
 
 .fa {
     color: white;
 }
 
-footer li {
-    list-style: none;
-}
 
-footer a {
-    color: white;
-    text-decoration: none;
-    font-family: 'Comfortaa', cursive;
-    padding: 1.5em 0em 0em 1.5em;
-}
 
-footer h6 {
-    color: white;
-    font-family: 'Comfortaa', cursive;
-    text-align: center;
-    padding: 0 0;
-    margin: 0 0;
-}
 
-.bottomFooter ul {
-    -webkit-column-count: 3; /* Chrome, Safari, Opera */
-    -moz-column-count: 3; /* Firefox */
-    column-count: 3;
-}
 

@@ -45,15 +45,8 @@
             <div class="topFooter">
             </div>
             <div class="bottomFooter">
-                <ul>
-                    <li><i class="fa fa-facebook-square" aria-hidden="true"></i><a href="#">facebook</a></li>
-                    <li><i class="fa fa-linkedin-square" aria-hidden="true"></i><a href="#">linkedin</a></li>
-                    <li><i class="fa fa-twitter-square" aria-hidden="true"></i><a href="#">twitter</a></li>
-                    <li><i class="fa fa-tumblr-square" aria-hidden="true"></i><a href="#">tumblr</a></li>
-                    <li><i class="fa fa-google-plus-square" aria-hidden="true"></i><a href="#">google+</a></li>
-                    <li><i class="fa fa-flickr" aria-hidden="true"></i><a href="#">flickr</a></li>
-                </ul>
-                <h6>2112 Settlers Lane | New York | New York | 10013 | ph: 917-815-9397</h6>
+                <p><i class="fa fa-coffee" aria-hidden="true"></i> Coffee Break Coder</p>
+                <p>&copy; {{ date('Y') }}</p>
             </div>
     </footer>
 
