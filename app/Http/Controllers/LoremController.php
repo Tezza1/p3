@@ -35,7 +35,8 @@ class LoremController extends Controller
      */
     public function store(Request $request)
     {
-        //
+         $number = $request;
+         return $number;
     }
 
     /**

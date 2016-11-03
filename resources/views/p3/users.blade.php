@@ -2,22 +2,22 @@
 
 @section("title")
     User Generator
-@stop
+@endsection
 
 @section("mainBanner")
 	<img src="img/jsCoffee.jpg" alt="">
 	<img src="img/html.jpg" alt="">
-@stop
+@endsection
 
 @section("headline")
 	<h1>User Generator</h1>
-@stop
+@endsection
 
 @section("overview")
 	<p>The table is designd to holp you create random user data that you can use to enter into your databses, mailing lists, etc.</p>
 	<p>The first step is to fill in the table with the required information. Input how many users you require and submit the information.</p>
-	<p>Then your data will be created. The copy and paste as reuired to allow you to focus on the imporant task of creating beautiful software.</p>
-@stop
+	<p>Then your data will be created. Then copy and paste as reuired to allow you to focus on the imporant task of creating beautiful software.</p>
+@endsection
 
 @section("contents")
 	<?php
@@ -44,26 +44,20 @@
 		}
 
 	?>
-
-	<form action="post">
+	<br>
+	<form>
+		{{ csrf_field() }}
         <fieldset>
-            <legend>Your vote</legend>
-            <label for="nationality">Your nationality:</label>
-            <input type="text" name="nationality" id="nationality">
-            <label for="city">City:</label>
-            <input type="text" name="city" id="city">
-            <label for="reason">Reason:</label>
-            <textarea name="reason" id="reason"></textarea>
-            <label for="contactInfo">More information:</label>
-            <input class="radioButn" type="radio" name="contactInfo" value="yes" id="contactInfo" checked>Yes
-            <input class="radioButn" type="radio" name="contactInfo" value="no">No
-            <label for="email">Email:</label>
-            <input type="text" name="email" id="email">
+            <legend>User Generator Form</legend>
             <br>
-            <button type="submit" value="submit">Submit</button>
+            <label for="userNumber">Number of dummy users required (1 - 100):</label>
+            <input type="number" name="userNumber" id="userNumber" value='{{ ("number") }}'>
+            <br>
+            <br>
+            <input type="submit" value="Generate users">
         </fieldset>
     </form>
-
+   
 	<h1>Hello</h1>
 	<p><?php echo getDOB();?></p>
 	<p><?php echo $faker->companyName;?></p>
@@ -80,4 +74,4 @@
 			<td>{{ getDOB() }}</td>
 		</tr>
 	</table>
-@stop
+@endsection

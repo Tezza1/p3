@@ -19,7 +19,7 @@
                 <ul>
                     <li><a href="main">Home</a></li>
                     <li><a href="users">User Generator</a></li>
-                    <li><a href="lorems">Ipsom Generator</a></li>
+                    <li><a href="lorems">Lorem Generator</a></li>
                 </ul>
             </nav>
         </div>
