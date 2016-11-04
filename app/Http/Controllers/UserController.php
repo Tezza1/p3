@@ -36,13 +36,10 @@ class UserController extends Controller
     public function store(Request $request)
     {
          $number = $request;
-         
+
           # Validate
-        $this->validate($request, [
-            'number' => 'required|min:1|max:100',
-        ]);
-         
-        return view('p3.users');
+
+         return view('p3.users');
     }
 
     /**

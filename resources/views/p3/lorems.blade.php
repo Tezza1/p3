@@ -20,7 +20,7 @@
 @endsection
 
 @section("contents")
-    <form action="GET" action="lorems">
+    <form action="post" action="/">
 		{{ csrf_field() }}
         <fieldset>
             <legend>Lorem Generator Form</legend>

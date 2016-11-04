@@ -45,7 +45,7 @@
 
 	?>
 	<br>
-	<form>
+	<form  method="post" action="/">
 		{{ csrf_field() }}
         <fieldset>
             <legend>User Generator Form</legend>
@@ -57,7 +57,7 @@
             <input type="submit" value="Generate users">
         </fieldset>
     </form>
-   
+
 	<h1>Hello</h1>
 	<p><?php echo getDOB();?></p>
 	<p><?php echo $faker->companyName;?></p>
