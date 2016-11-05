@@ -16,11 +16,11 @@ Route::get('/', function () {
 });
 
 // A route for each page
-Route::get("/main", "MainController@index")->name('main.index');
+Route::get("main", "MainController@index")->name('main.index');
 
-Route::get("/lorems", "LoremController@index")->name('lorems.index');
+Route::get("lorems", "LoremController@index")->name('lorems.index');
 
-Route::post("/lorems", "LoremController@store")->name('lorems.store');
+Route::post("lorems", "LoremController@store")->name('lorems.store');
 
 Route::get("users","UserController@index")->name('users.index');
 

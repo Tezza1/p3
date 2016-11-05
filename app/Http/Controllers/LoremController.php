@@ -35,8 +35,12 @@ class LoremController extends Controller
      */
     public function store(Request $request)
     {
-         $number = $request;
-         return $number;
+         
+         $wordNumber = $request->input("loremWords");
+         $sentenceNumber = $request->input("loremSentences");
+         $paragraphNumber = $request->input("loremParagraphs");
+         
+         return view('p3.lorems')->with("wordNumber", $wordNumber)->with("sentenceNumber", $sentenceNumber)->with("paragraphNumber", $paragraphNumber);
     }
 
     /**

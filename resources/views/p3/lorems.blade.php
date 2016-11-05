@@ -20,7 +20,7 @@
 @endsection
 
 @section("contents")
-    <form action="post" action="/">
+    <form method="post" action="/lorems">
 		{{ csrf_field() }}
         <fieldset>
             <legend>Lorem Generator Form</legend>
@@ -32,11 +32,16 @@
             <input type="number" name="loremSentences" id="loremSentences"><br>
             <br>
             <label for="loremParagraphs">Number of lorem paragraphs required (1 - 100):</label>
-            <input type="number" name="loremParagraphs" id="loremParagraphs"><br>            
+            <input type="number" name="loremParagraphs" id="loremParagraphs"><br>
             <br>
             <input type="submit" value="Generate lorem ipsom text">
         </fieldset>
     </form>
+    <br>
+    <h1>Words: {{ $wordNumber }} </h1>
+	<h1>Sentences: {{ $sentenceNumber }}</h1>
+	<h1>Paragraphs: {{ $paragraphNumber }}</h1>
+    <br>
 	<?php
 		$lipsum = new joshtronic\LoremIpsum();
 		echo '5 words: ' . $lipsum->words(5);

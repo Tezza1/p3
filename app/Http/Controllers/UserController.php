@@ -35,11 +35,11 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-         $number = $request;
+         $number = $request->input('userNumber');
 
           # Validate
 
-         return view('p3.users');
+         return view('p3.users')->with("number", $number);
     }
 
     /**

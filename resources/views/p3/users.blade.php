@@ -45,7 +45,7 @@
 
 	?>
 	<br>
-	<form  method="post" action="/">
+	<form  method="post" action="/users">
 		{{ csrf_field() }}
         <fieldset>
             <legend>User Generator Form</legend>
@@ -56,22 +56,24 @@
             <br>
             <input type="submit" value="Generate users">
         </fieldset>
-    </form>
-
-	<h1>Hello</h1>
-	<p><?php echo getDOB();?></p>
-	<p><?php echo $faker->companyName;?></p>
-	<p><?php echo $generator->getName();?></p>
-	<table>
-		<tr>
-			<th>Name</th>
-			<th>Company</th>
-			<th>Date of Birth</th>
-		</tr>
-		<tr>
-			<td>{{ $generator->getName() }}</td>
-			<td>{{ $faker->companyName }}</td>
-			<td>{{ getDOB() }}</td>
-		</tr>
-	</table>
+    </form> 
+    <br>
+    @if ($number < 1 || $number > 100)
+        <p>Enter a valid number range</p>
+    @else       
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Company</th>
+                <th>Date of Birth</th>
+            </tr>
+            @for($i = 0; $i < $number; $i++)
+                <tr>
+                    <td>{{ $generator->getName() }}</td>
+                    <td>{{ $faker->companyName }}</td>
+                    <td>{{ getDOB() }}</td>
+                </tr>
+            @endfor
+        </table>
+    @endif
 @endsection
