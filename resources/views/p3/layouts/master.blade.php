@@ -17,7 +17,7 @@
             <h1>Coffee Break Coder</h1>
             <nav>
                 <ul>
-                    <li><a href="main">Home</a></li>
+                    <li><a href="/">Home</a></li>
                     <li><a href="users">User Generator</a></li>
                     <li><a href="lorems">Lorem Generator</a></li>
                 </ul>
@@ -29,7 +29,7 @@
         @yield("mainBanner")
     </div>
 
-    <di class="headline">
+    <div class="headline">
         @yield("headline")
     </div>
 
@@ -37,8 +37,16 @@
         @yield("overview")
     </div>
 
-    <div class="contents">
-        @yield ("contents")
+    <div class="forms">
+        @yield("forms")
+    </div>
+    
+    <div class = "error">
+        @yield("error") 
+    </div>
+    
+    <div class="output">
+        @yield("output")
     </div>
 
     <footer>

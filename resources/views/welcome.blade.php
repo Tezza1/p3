@@ -1,91 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends("p3.layouts.master")
 
-        <title>Laravel</title>
+@section("title")
+    Main Page
+@endsection
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+@section("mainBanner")
+	<img src="img/coffeeCode.jpg" alt="">
+	<img src="img/coffeeLife.png" alt="">
+@endsection
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
+@section("headline")
+	<h1>Welcome to the Coffee Break Coder</h1>
+@endsection
 
-            .full-height {
-                height: 100vh;
-            }
+@section("overview")
+	<p>The <em>Coffee Break Coder</em> is a website designed to make web programmer&rsquo;s life easier. It contains everyday tools designed to streamline tasks or provide dummy 	&ldquo;filler&rdquo; information. Two key tasts that web developers reuire is creating dummy text to check the layout of their pages and dummy users. We look forward to helping to make your life easier by streamlining these tasks. So please check out out the relevant links at the top of the page.</p>
+	{{-- http://www.lipsum.com/ --}}
+	<p><em>Lorem Ipsum</em> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, so many and web devlopers use Lorem Ipsum as their default model text</p>
+	<p>This is a simple tool to help generate <em>fake users</em> to help popluate data required to test your web projects. It can be used test web page layouts, databases, routes, etc. in your local production environment without worrying about either entering real data (and worrying about information privacy issues) or the time consuming task of entering large amounts of fake data.</p>
+	<p>So please relax and enjoy your work. And enjoy using the The <em>Coffee Break Coder</em>.</p>
+@endsection
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
+@section("contents")
 
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    <a href="{{ url('/login') }}">Login</a>
-                    <a href="{{ url('/register') }}">Register</a>
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
-        </div>
-    </body>
-</html>
+@endsection

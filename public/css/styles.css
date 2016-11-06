@@ -92,6 +92,45 @@ nav a:visited {
     font-size: 1.2em;
 }
 
+/* --------------- FORM ---------------*/
+.forms fieldset {
+	border-radius: 2.5%;
+}
+
+.forms legend {
+	font-family: 'Comfortaa', cursive;
+	font-size: 150%;
+	margin-bottom: 1em;
+}
+
+.forms label {
+	font-weight: bold;
+	margin-bottom: 0.5em;
+}
+
+.forms input {
+	margin-bottom: 1.5em;
+}
+
+.button {
+	font-family: sans-serif;
+	color: white;
+	background-color: black;
+	padding: 1em;
+	border-radius: 10%;
+	margin-bottom: 1em;
+}
+
+/* TDO: FIX FORM STYLING */
+
+/* ---------- ERROR STYLES ---------- */
+.error li {
+    font-family: 'Comfortaa', cursive;
+    font-size: 0.8em;
+    font-style: italic;
+    color: red;
+}
+
 /* ---------- FOOTER STYLES ---------- */
 
 .topFooter {

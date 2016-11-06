@@ -19,7 +19,7 @@
 	<p>Then your data will be created. Then copy and paste as reuired to allow you to focus on the imporant task of creating beautiful software.</p>
 @endsection
 
-@section("contents")
+@section("forms")
     <form method="post" action="/lorems">
 		{{ csrf_field() }}
         <fieldset>
@@ -34,13 +34,24 @@
             <label for="loremParagraphs">Number of lorem paragraphs required (1 - 100):</label>
             <input type="number" name="loremParagraphs" id="loremParagraphs"><br>
             <br>
-            <input type="submit" value="Generate lorem ipsom text">
+            <input class="button" type="submit" value="Generate lorem ipsom text">
         </fieldset>
     </form>
+@endsection
+
+@section("error")
     <br>
-    <h1>Words: {{ $wordNumber }} </h1>
-	<h1>Sentences: {{ $sentenceNumber }}</h1>
-	<h1>Paragraphs: {{ $paragraphNumber }}</h1>
+    @if(count($errors) > 0) 
+        <ul class="error"> 
+            @foreach ($errors->all() as $error) 
+                <li>{{ $error }}</li> 
+            @endforeach 
+        </ul> 
+    @endif
+    <br>
+@endsection
+
+@section("output")
     <br>
 	<?php
 		$lipsum = new joshtronic\LoremIpsum();
@@ -56,3 +67,7 @@
 		// Generates: <article><p>...</p></article><article><p>...</p></article><article><p>...</p></article>
 	?>
 @endsection
+
+
+
+

@@ -1,7 +1,6 @@
 <?php
 
 namespace p3\Http\Controllers;
-
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -35,10 +34,13 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
+        # validate form input -------------------
+         $this->validate($request, [ 
+            'userNumber' => 'numeric|min:1|max:100',
+         ]);
+         
          $number = $request->input('userNumber');
-
-          # Validate
-
+        
          return view('p3.users')->with("number", $number);
     }
 
