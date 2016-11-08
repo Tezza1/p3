@@ -25,14 +25,15 @@
         <fieldset>
             <legend>Lorem Generator Form</legend>
             <br>
-            <label for="loremWords">Number of lorem words required (1 - 100):</label>
-            <input type="number" name="loremWords" id="loremWords"><br>
+			 <label for="typeOutput">Select type of output:</label>
+			 <br><br>
+            <input class="radioButn" type="radio" name="typeOutput" value="lorenWords" checked>Words
+            <input class="radioButn" type="radio" name="typeOutput" value="loremSentences">Sentences
+			<input class="radioButn" type="radio" name="typeOutput" value="loremParagraphs">Paragraphs
             <br>
-            <label for="loremSentences">Number of lorem sentences required (1 - 100):</label>
-            <input type="number" name="loremSentences" id="loremSentences"><br>
+			<label for="number">Number required (1 - 100):</label>
+            <input type="number" name="number" id="number" value='number'placeholder="Enter number 1- 100">
             <br>
-            <label for="loremParagraphs">Number of lorem paragraphs required (1 - 100):</label>
-            <input type="number" name="loremParagraphs" id="loremParagraphs"><br>
             <br>
             <input class="button" type="submit" value="Generate lorem ipsom text">
         </fieldset>
@@ -52,20 +53,21 @@
 @endsection
 
 @section("output")
+	@if ($number == 0)
+		<p>Generated lorem ipsum data will print here</p>
+	@else
+		<!-- Blade print function doesn't work with this plugin -->
+		<h3>Copy and paste the required text below:</h3>
+		<?php $lipsum = new joshtronic\LoremIpsum(); ?>
+		@if ($typeOutput == "lorenWords")
+			<?php echo $lipsum->words($number); ?>
+		@elseif ($typeOutput == "loremSentences")
+			<?php echo $lipsum->sentences($number); ?>
+		@else
+			<?php echo $lipsum->paragraphs($number, 'p'); ?>
+		@endif
+	@endif
     <br>
-	<?php
-		$lipsum = new joshtronic\LoremIpsum();
-		echo '5 words: ' . $lipsum->words(5);
-		echo "<br>";
-		echo '1 sentence:  ' . $lipsum->sentence();
-		echo "<br>";
-		echo '5 sentences: ' . $lipsum->sentences(5);
-		echo "<br>";
-		echo $lipsum->paragraphs(3, 'p');
-		// Generates: <p>Lorem ipsum...</p><p>...</p><p>...</p>
-		echo $lipsum->sentences(3, ['article', 'p']);
-		// Generates: <article><p>...</p></article><article><p>...</p></article><article><p>...</p></article>
-	?>
 @endsection
 
 

@@ -13,8 +13,9 @@ class LoremController extends Controller
      */
     public function index()
     {
-        // TODO: Add
-        return view('p3.lorems');
+        $number = 0;
+		
+        return view('p3.lorems')->with("number", $number);
     }
 
     /**
@@ -37,15 +38,16 @@ class LoremController extends Controller
     {
          
          # validate form input -------------------
-                 # validate form input -------------------
          $this->validate($request, [ 
-            'loremWords' => 'numeric|min:1|max:100',
-            'loremSentences' => 'numeric|min:1|max:100',
-            'loremParagraphs' => 'numeric|min:1|max:100',
+            'number' => 'numeric|min:1|max:100',
          ]);
          
+		 # generate output ------------------------
+		 $number = $request->input('number');
+		 
+		 $typeOutput = $_POST['typeOutput'];
          
-         return view('p3.lorems');
+         return view('p3.lorems')->with("number", $number)->with("typeOutput", $typeOutput);
     }
 
     /**

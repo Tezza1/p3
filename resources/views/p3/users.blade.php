@@ -25,7 +25,7 @@
             <legend>User Generator Form</legend>
             <br>
             <label for="userNumber">Number of dummy users required (1 - 100):</label>
-            <input type="number" name="userNumber" id="userNumber" value='userNumber'placeholder="1">
+            <input type="number" name="userNumber" id="userNumber" value='userNumber'placeholder="Enter number 1- 100">
             <br>
             <br>
             <input class="button" type="submit" value="Generate users">
@@ -46,6 +46,17 @@
 @endsection
 
 @section("output")
+@if ($number == 0)
+	<p>Generated user data will print here</p>
+@else
+	<table>
+		@foreach($users as $user)
+			<tr>
+				<td>{{ $user }}</td>
+			</tr>
+		@endforeach
+	<table>
+@endif
 @endsection
 
 

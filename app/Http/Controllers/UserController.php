@@ -13,7 +13,9 @@ class UserController extends Controller
     public function index()
     {
         //TDDO: Add
-        return view('p3.users');
+		$number = 0;
+		
+        return view('p3.users')->with("number", $number);
     }
 
     /**
@@ -38,10 +40,41 @@ class UserController extends Controller
          $this->validate($request, [ 
             'userNumber' => 'numeric|min:1|max:100',
          ]);
+
+		# generate data -------------------------
+		$number = $request->input('userNumber');
+
+		// Fale birthday generator
+		function getDOB () {
+			// Reference to: http://stackoverflow.com/questions/16568605/generate-randomy-birth-date
+			$curr_year = date('Y');
+
+			$dob_year  = rand($curr_year-18,$curr_year-47);
+			$dob_month = rand(01,12);
+			$dob_day   = rand(01,30);
+
+			$dob = $dob_month.'/'.$dob_day.'/'.$dob_year;
+
+			return $dob;
+		}
+		
+		// Fake name generator
+		// $generator = \Nubs\RandomNameGenerator\All::create();
+		$generator = new \Nubs\RandomNameGenerator\Alliteration();
+		
+		$user = [];
+		for ($i = 0; $i < $number; $i++) {
+			$users[$i] = $generator->getName();
+		}
+			
+		$birthdays = [];
+		for ($i = 0; $i < $number; $i++) {
+			$birthdays[$i] = getDOB();
+		}
+		
+		
          
-         $number = $request->input('userNumber');
-        
-         return view('p3.users')->with("number", $number);
+		 return view('p3.users')->with("number", $number)->with("users", $users)->with("birthdays", $birthdays);
     }
 
     /**

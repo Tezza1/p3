@@ -25,3 +25,9 @@ Route::post("lorems", "LoremController@store")->name('lorems.store');
 Route::get("users","UserController@index")->name('users.index');
 
 Route::post("users", "UserController@store")->name('users.store');
+
+
+
+
+
+
