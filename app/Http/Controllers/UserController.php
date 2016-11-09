@@ -43,23 +43,8 @@ class UserController extends Controller
 
 		# generate data -------------------------
 		$number = $request->input('userNumber');
-
-		// Fale birthday generator
-		function getDOB () {
-			// Reference to: http://stackoverflow.com/questions/16568605/generate-randomy-birth-date
-			$curr_year = date('Y');
-
-			$dob_year  = rand($curr_year-18,$curr_year-47);
-			$dob_month = rand(01,12);
-			$dob_day   = rand(01,30);
-
-			$dob = $dob_month.'/'.$dob_day.'/'.$dob_year;
-
-			return $dob;
-		}
 		
 		// Fake name generator
-		// $generator = \Nubs\RandomNameGenerator\All::create();
 		$generator = new \Nubs\RandomNameGenerator\Alliteration();
 		
 		$user = [];
@@ -67,14 +52,8 @@ class UserController extends Controller
 			$users[$i] = $generator->getName();
 		}
 			
-		$birthdays = [];
-		for ($i = 0; $i < $number; $i++) {
-			$birthdays[$i] = getDOB();
-		}
-		
-		
          
-		 return view('p3.users')->with("number", $number)->with("users", $users)->with("birthdays", $birthdays);
+		 return view('p3.users')->with("number", $number)->with("users", $users);
     }
 
     /**

@@ -20,6 +20,7 @@
                     <li><a href="/">Home</a></li>
                     <li><a href="users">User Generator</a></li>
                     <li><a href="lorems">Lorem Generator</a></li>
+					<li><a href="password">Password Generator</a></li>
                 </ul>
             </nav>
         </div>

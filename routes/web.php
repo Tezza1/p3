@@ -26,8 +26,8 @@ Route::get("users","UserController@index")->name('users.index');
 
 Route::post("users", "UserController@store")->name('users.store');
 
+Route::get("password", "PasswordController@index")->name('passwords.index');
 
-
-
+Route::post("password", "PasswordController@store")->name('passwords.store');
 
 

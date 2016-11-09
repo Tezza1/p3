@@ -49,6 +49,7 @@
 @if ($number == 0)
 	<p>Generated user data will print here</p>
 @else
+	<h3>Copy and paste the required text below:</h3>
 	<table>
 		@foreach($users as $user)
 			<tr>
